@@ -16,3 +16,26 @@
   - collection: `airbnb`
 - ![Select collection](./img/select_collection.png)
 - Click `add data`, `import file` and choose `json` and enter path to the previous downloaded `json` file
+
+
+## queries
+
+
+>to use `MONGOSH` (shell in compass)
+>![Click mongosh](./img/open_mongosh.png)
+>
+>
+>```javascript
+>use <database_name> 
+>```
+>
+
+### single field
+
+
+### multiple fields (compound index)
+
+### covered query
+
+### wildcard index
+
