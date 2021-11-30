@@ -20,18 +20,21 @@
 
 ## queries
 
-
 >to use `MONGOSH` (shell in compass)
 >![Click mongosh](./img/open_mongosh.png)
 >
 >
 >```javascript
->use <database_name> 
+>use <database_name> (demo)
 >```
 >
 
 ### single field
 
+```javascript
+db.airbnb.find({_id: "10006546"})
+db.airbnb.find({_id: "10006546"}, {description: 1})
+```
 
 ### multiple fields (compound index)
 
