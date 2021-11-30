@@ -8,7 +8,7 @@
 - Download from https://github.com/neelabalan/mongodb-sample-dataset/blob/main/sample_airbnb/listingsAndReviews.json
 - Start MongoDB
 - Start Compass and connect to `localhost` 
-- ![Click Fill connection string button](/img/localhost_overview.png) Click `fill in ..` 
+![Click Fill connection string button](/img/localhost_overview.png) Click `fill in ..` 
 - ![Window to set connection string values](/img/localhost_fill_connection_string.png)  Click `connect`
 - ![Create new database to import data](/img/create_database.png)
 - I will use: 
