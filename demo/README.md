@@ -28,17 +28,25 @@
 >use <database_name> (demo)
 >```
 >
+- Show feature for search history
 
 ### single field
+- 
 
+-
 ```javascript
 db.airbnb.find({_id: "10006546"})
 db.airbnb.find({_id: "10006546"}, {description: 1})
 ```
+
 
 ### multiple fields (compound index)
 
 ### covered query
 
 ### wildcard index
-
+- create on amenities 
+- query TV
+- query TV and Washer
+- add new field to amenities (Beer)
+- query for it (with explain)
