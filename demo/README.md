@@ -36,17 +36,28 @@
 
 ```javascript
 db.airbnb.find({_id: "10006546"}) //IDHACK
-db.airbnb.find({_id: "10006546"}, {description: 1}) //COLLSCAN
+db.airbnb.find({_id: "10006546"}, {description: 1}) //PROJECTION DEFAULT
+db.airbnb.find({property_type: "House"}) //COLLSCAN
 ```
-
 
 ### multiple fields (compound index)
 > [Docs](https://docs.mongodb.com/manual/core/index-compound/)
 
 ```javascript
-db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}})
-db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, cancellation_policy : {$in : ["moderate", "flexible"]}}, {description : 1})
+db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, {reviews : 0, amenities: 0}})
+db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, cancellation_policy : {$in : ["moderate", "flexible"]}}, {reviews : 0, amenities: 0})
+db.explain. ...
 ```
+
+- create index on all fields of query
+- repeat last query with explain after index creation
+- repeat second last query with explain
+
+```javascript
+db.airbnb.find({cancellation_policy : "moderate"})
+db.airbnb.explain().find({property_type : "House", cancellation_policy : {$in : ["moderate", "flexible"]}})
+```
+> Since a query on item and stock omits the location index prefix, it cannot use the stock index field which follows location. Only the item field in the index can support this query. See Create Indexes to Support Your Queries for more information.
 
 ### covered query
 > [Docs](https://docs.mongodb.com/manual/core/query-optimization/#std-label-read-operations-covered-query)
