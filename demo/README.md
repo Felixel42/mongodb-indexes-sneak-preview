@@ -71,5 +71,5 @@ db.airbnb.explain().find({property_type : "House", cancellation_policy : {$in : 
 - create on amenities 
 - query TV
 - query TV and Washer
-- add new field to amenities (Beer)
+- add new field tbaby shao amenities (Beer)
 - query for it (with explain)
