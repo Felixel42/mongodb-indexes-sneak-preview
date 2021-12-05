@@ -17,10 +17,6 @@ layout: intro
 
 Intro zu MongoDB Indizes und Compass
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 layout: quote
 author: "Wikipedia: Sneak Preview"
@@ -31,11 +27,25 @@ Eine **Sneak Preview** oder kurz **Sneak** ist eine unangekündigte Filmvorführ
 
 ---
 
+# Ziele des Vortrags
+
+<v-clicks>
+
+- Features von MongoDB Compass zeigen
+- Single Field Indizes
+- Compound Indizes
+- Covered Queries 💡🚀 
+- 🎁 
+
+</v-clicks>
+
+---
+
 # SQL Bias
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+- 📝 **Text-based** - focus on the content with Markdown, and then style them later 
 - 🎨 **Themable** - theme can be shared and used with npm packages
 - 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
 - 🤹 **Interactive** - embedding Vue components to enhance your expressions
@@ -45,18 +55,6 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 
 <br>
 <br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
----
-
-# Ziele
-
-- Features von MongoDB Compass zeigen
-- Single Field Indizes 1️
-- Compund Indizes
-- Covered Queries 💡🚀 
-- 🎁 
 
 ---
 
@@ -82,45 +80,215 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 />
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+
 ---
 
-# Code
+# MongoDB Airbnb sample [^1]
 
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
+```json
+{
+  "_id": "10006546",
+  "listing_url": "https://www.airbnb.com/rooms/10006546",
+  "name": "Ribeira Charming Duplex",
+  "summary": "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
+  "interaction": "Cot - 10 € / night Dog - € 7,5 / night",
+  "house_rules": "Make the house your home...",
+  "property_type": "House",
+  "room_type": "Entire home/apt",
+  "bed_type": "Real Bed",
+  "minimum_nights": "2",
+  "maximum_nights": "30",
+  "cancellation_policy": "moderate",
+  "last_scraped": {
+    "$date": {
+      "$numberLong": "1550293200000"
+    }
+  },
+  "calendar_last_scraped": {
+    "$date": {
+      "$numberLong": "1550293200000"
+    }
+  },
+  "first_review": {
+    "$date": {
+      "$numberLong": "1451797200000"
+    }
+  },
+  "last_review": {
+    "$date": {
+      "$numberLong": "1547960400000"
+    }
+  },
+  "accommodates": {
+    "$numberInt": "8"
+  },
+  "bedrooms": {
+    "$numberInt": "3"
+  },
+  "beds": {
+    "$numberInt": "5"
+  },
+  "number_of_reviews": {
+    "$numberInt": "51"
+  },
+  "bathrooms": {
+    "$numberDecimal": "1.0"
+  },
+  "amenities": [
+    "TV",
+    ...
+  ],
+  "price": {
+    "$numberDecimal": "80.00"
+  },
+  "security_deposit": {
+    "$numberDecimal": "200.00"
+  },
+  "cleaning_fee": {
+    "$numberDecimal": "35.00"
+  },
+  "extra_people": {
+    "$numberDecimal": "15.00"
+  },
+  "guests_included": {
+    "$numberDecimal": "6"
+  },
+  "images": {
+    "thumbnail_url": "",
+    "medium_url": "",
+    "picture_url": "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+    "xl_picture_url": ""
+  },
+  "host": {
+    "host_id": "51399391",
+    "host_url": "https://www.airbnb.com/users/show/51399391",
+    "host_name": "Ana&Gonçalo",
+    "host_location": "Porto, Porto District, Portugal",
+    "host_about": "Gostamos de passear, de viajar, de conhecer pessoas e locais novos, gostamos de desporto e animais! Vivemos na cidade mais linda do mundo!!!",
+    "host_response_time": "within an hour",
+    "host_thumbnail_url": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    "host_picture_url": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_x_medium",
+    "host_neighbourhood": "",
+    "host_response_rate": {
+      "$numberInt": "100"
+    },
+    "host_is_superhost": false,
+    "host_has_profile_pic": true,
+    "host_identity_verified": true,
+    "host_listings_count": {
+      "$numberInt": "3"
+    },
+    "host_total_listings_count": {
+      "$numberInt": "3"
+    },
+    "host_verifications": [
+      "email",
+      "phone",
+      "reviews",
+      "jumio",
+      "offline_government_id",
+      "government_id"
+    ]
+  },
+  "address": {
+    "street": "Porto, Porto, Portugal",
+    "suburb": "",
+    "government_area": "Cedofeita, Ildefonso, Sé, Miragaia, Nicolau, Vitória",
+    "market": "Porto",
+    "country": "Portugal",
+    "country_code": "PT",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "-8.61308"
+        },
+        {
+          "$numberDouble": "41.1413"
+        }
+      ],
+      "is_location_exact": false
+    }
+  },
+  "availability": {
+    "availability_30": {
+      "$numberInt": "28"
+    },
+    "availability_60": {
+      "$numberInt": "47"
+    },
+    "availability_90": {
+      "$numberInt": "74"
+    },
+    "availability_365": {
+      "$numberInt": "239"
+    }
+  },
+  "review_scores": {
+    "review_scores_accuracy": {
+      "$numberInt": "9"
+    },
+    "review_scores_cleanliness": {
+      "$numberInt": "9"
+    },
+    "review_scores_checkin": {
+      "$numberInt": "10"
+    },
+    "review_scores_communication": {
+      "$numberInt": "10"
+    },
+    "review_scores_location": {
+      "$numberInt": "10"
+    },
+    "review_scores_value": {
+      "$numberInt": "9"
+    },
+    "review_scores_rating": {
+      "$numberInt": "89"
+    }
+  },
+  "reviews": [
+    {
+      "_id": "362865132",
+      "date": {
+        "$date": {
+          "$numberLong": "1545886800000"
+        }
+      },
+      "listing_id": "10006546",
+      "reviewer_id": "208880077",
+      "reviewer_name": "Thomas",
+      "comments": "Very helpful hosts. Cooked traditional..."
+    },
+    {
+      "_id": "364728730",
+      "date": {
+        "$date": {
+          "$numberLong": "1546232400000"
+        }
+      },
+      "listing_id": "10006546",
+      "reviewer_id": "91827533",
+      "reviewer_name": "Mr",
+      "comments": "Ana & Goncalo were great on communication..."
+    },
+    {
+      "_id": "403055315",
+      "date": {
+        "$date": {
+          "$numberLong": "1547960400000"
+        }
+      },
+      "listing_id": "10006546",
+      "reviewer_id": "15138940",
+      "reviewer_name": "Milo",
+      "comments": "The house was extremely well located..."
+    }
+  ]
 }
 ```
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+[^1]: [](https://docs.atlas.mongodb.com/sample-data/sample-airbnb/)
 
 ---
 
