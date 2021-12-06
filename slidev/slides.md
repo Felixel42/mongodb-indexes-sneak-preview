@@ -29,7 +29,9 @@ Eine **Sneak Preview** oder kurz **Sneak** ist eine unangekündigte Filmvorführ
 
 # SQL Bias
 
+<div grid="~ cols-2 gap-2" m="-t-2">
 
+<v-click>
 ```mermaid {theme: 'neutral', scale: 0.7}
 graph TD
 B[Neue Query für MongoDB] --> C{Entscheidung}
@@ -37,8 +39,17 @@ C -->|SQL| D[SELECT * ..]
 C -->|MQL| E[db.find ]
 D -->|Transform| F[db.find]
 E -->|Execute| G[Query Result]
-F -->|Execute| G[Query Result]
+F -->|Execute| H[Query Result]
 ```
+</v-click>
+
+<v-click>
+
+- `MQL`: [MongoDB Query Language MQL](https://www.mongodb.com/basics/examples)
+
+</v-click>
+
+</div>
 
 <style>
     h1 {
@@ -101,40 +112,13 @@ image: https://source.unsplash.com/random?coding
 
 # Demo 👩‍💻
 
+- <carbon-logo-github /> [demo](https://github.com/Felixel42/mongodb-indexes-sneak-preview/blob/main/demo/README.md)
+
 <style>
   h1 {
     @apply text-shadow-xl;
   }
 </style>
-
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
 layout: cover
