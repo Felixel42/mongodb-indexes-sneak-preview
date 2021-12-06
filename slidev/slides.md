@@ -173,4 +173,4 @@ layout: cover
 - <carbon-link /> [Sample AirBnB Listings Dataset - Daten von Inside Airbnb](https://docs.atlas.mongodb.com/sample-data/sample-airbnb/)
 - <carbon-logo-github /> [github.com/Felixel42/mongodb-indexes-sneak-preview](https://github.com/Felixel42/mongodb-indexes-sneak-preview)
 - <carbon-logo-github /> [Set up database & demo](https://github.com/Felixel42/mongodb-indexes-sneak-preview/blob/main/demo/README.md)
-- <vscode-icons-file-type-mongo/> <carbon-link /> [Erklärvideo zum Verständnis von explain()](https://www.mongodb.com/presentations/tips-and-tricks-for-query-performance-let-us-explain-them)
+- <carbon-link /> [Erklärvideo zum Verständnis von explain()](https://www.mongodb.com/presentations/tips-and-tricks-for-query-performance-let-us-explain-them) <vscode-icons-file-type-mongo/> 
