@@ -58,6 +58,8 @@ F -->|Execute| H[Query Result]
 </style>
 
 ---
+class: fade
+---
 
 # Plan
 
@@ -66,14 +68,47 @@ F -->|Execute| H[Query Result]
 - Features von MongoDB Compass
 - Single Field Indizes
 - Compound Indizes
-- Covered Queries 💡🚀 
+- Covered Queries 💡🚀 <twemoji-magic-wand class="animate-ping"/>
 - 🎁 
 
 </v-clicks>
 
 ---
+class: fade
+---
+# MongoDB Compass <simple-icons-mongodb/>
 
-# AirBnB Anzeigen Beispiel Dataset [^1]
+<v-clicks >
+
+- Vollversion frei verfügbar [^1]
+- Realtime Performance Tab [^2] <dashicons-performance/>
+- CRUD Funktionalität [^3]
+- Aggregation Pipeline Builder [^4] 💪
+
+</v-clicks>
+
+[^1]: [MongoDB Compass is now free for all!](https://www.mongodb.com/blog/post/compass-now-free-for-all)
+[^2]: [MongoDB Compass Performance Tab](https://docs.mongodb.com/compass/current/performance/)
+[^3]: [Capabilities of Compass Editions](https://docs.mongodb.com/compass/current/editions/)
+[^4]: [Aggregation Pipeline Builder](https://docs.mongodb.com/compass/current/aggregation-pipeline-builder/)
+
+<style>
+  h1 {
+    @apply !text-2xl;
+  }
+  .footnotes-sep {
+    @apply mt-40 opacity-10;
+  }
+  .footnotes {
+    @apply text-sm opacity-75;
+  }
+  .footnote-backref {
+    display: none;
+  }
+</style>
+---
+
+# AirBnB Dataset [^1]
 
 ```json {2|3-9|10-14|all}
 {
@@ -103,6 +138,15 @@ F -->|Execute| H[Query Result]
   h1 {
     @apply !text-2xl;
   }
+  .footnotes-sep {
+    @apply mt-20 opacity-10;
+  }
+  .footnotes {
+    @apply text-sm opacity-75;
+  }
+  .footnote-backref {
+    display: none;
+  }
 </style>
 
 ---
@@ -124,7 +168,7 @@ image: https://source.unsplash.com/random?coding
 layout: cover
 ---
 
-# Danke!
+# Danke! 🎄
 
 - <carbon-link /> [Sample AirBnB Listings Dataset - Daten von Inside Airbnb](https://docs.atlas.mongodb.com/sample-data/sample-airbnb/)
 - <carbon-logo-github /> [github.com/Felixel42/mongodb-indexes-sneak-preview](https://github.com/Felixel42/mongodb-indexes-sneak-preview)
