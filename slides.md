@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 download: true
-title: mongodb indexes sneak preview
+title: MongoDB Indizes - Sneak Preview
 layout: intro
 ---
 
@@ -80,6 +80,7 @@ class: fade
 
 <v-clicks >
 
+- GUI für den Zugriff auf MongoDB
 - Vollversion frei verfügbar [^1]
 - Realtime Performance Tab [^2] <dashicons-performance/>
 - CRUD Funktionalität [^3]
