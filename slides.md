@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 download: true
-title: MongoDB Indizes - Sneak Preview
+title: mongodb indexes sneak preview
 layout: intro
 ---
 
