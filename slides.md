@@ -45,6 +45,12 @@ F -->|Execute| H[Query Result]
 
 <v-click>
 
+<emojione-loudly-crying-face class="absolute bottom-10 left-20"/>
+
+</v-click>
+
+<v-click>
+
 - `MQL`: [MongoDB Query Language MQL](https://www.mongodb.com/basics/examples)
 
 </v-click>

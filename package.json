@@ -15,6 +15,7 @@
   "name": "slidev",
   "devDependencies": {
     "@iconify-json/dashicons": "^1.0.1",
+    "@iconify-json/emojione": "^1.0.2",
     "@iconify-json/fa": "^1.0.1",
     "@iconify-json/logos": "^1.0.1",
     "@iconify-json/mdi": "^1.0.11",
