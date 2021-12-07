@@ -74,9 +74,10 @@ db.airbnb.explain().find({property_type : "House", cancellation_policy : {$in : 
 - query against fields whose names cannot be known in advance
 - only single field
 > [Create Wildcard Index in compass](https://docs.mongodb.com/compass/master/indexes/#std-label-compass-wildcard-index)
+> `host.$**`
 
-- create on amenities 
-- query TV
-- query TV and Washer
-- add new field to amenities (Beer)
-- query for it (with explain)
+- create on host 
+- query host_response_rate > 80
+- query host_response_rate > 80 and host_is_superhost : true
+- add new field to host (host_is_dev) true (change type right)
+- query for it (with explain) 
