@@ -114,6 +114,33 @@ class: fade
   }
 </style>
 ---
+image: https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg
+---
+
+# Datenbankindex kurz erklärt [^1]
+
+<img
+  class="absolute w-200 bg-white"
+  src="https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg"
+/>
+
+[^1]: [MongoDB - Indexes](https://docs.mongodb.com/manual/indexes/)
+
+<style>
+  h1 {
+    @apply !text-2xl;
+  }
+  .footnotes-sep {
+    @apply mt-110 opacity-10;
+  }
+  .footnotes {
+    @apply text-sm opacity-75;
+  }
+  .footnote-backref {
+    display: none;
+  }
+</style>
+---
 
 # AirBnB Dataset [^1]
 
