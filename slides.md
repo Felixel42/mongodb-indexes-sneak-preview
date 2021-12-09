@@ -34,7 +34,7 @@ p {
 
 # SQL Bias
 
-<div grid="~ cols-2 gap-2" m="-t-2">
+<div grid="~ cols-2 gap-2">
 
 <v-click>
 ```mermaid {theme: 'neutral', scale: 0.7}
@@ -48,11 +48,10 @@ F -->|Execute| H[Query Result]
 ```
 </v-click>
 
-<v-click>
+<flat-color-icons-google v-click class="absolute bottom-43 left-13"/>
+<emojione-loudly-crying-face v-click class="absolute bottom-8 left-27"/>
+<fluent-document-error-24-regular v-after class="absolute bottom-8 left-20 bg-orange-400"/>
 
-<emojione-loudly-crying-face class="absolute bottom-10 left-20"/>
-
-</v-click>
 
 <v-click>
 
