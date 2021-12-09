@@ -23,8 +23,13 @@ author: "Wikipedia: Sneak Preview"
 link: https://de.wikipedia.org/wiki/Sneak_Preview
 ---
 
-Eine **Sneak Preview** oder kurz **Sneak** ist eine unangekündigte Filmvorführung (Vorschau) vor dem offiziellen Release [...]. Die Besucher wissen beim Kartenkauf nicht, welcher Film gezeigt wird.
+Eine **Sneak Preview** oder kurz **Sneak** ist eine unangekündigte Filmvorführung (Vorschau) vor dem offiziellen Release [...]. 
 
+<style>
+p {
+  @apply font-light;
+}
+</style>
 ---
 
 # SQL Bias
