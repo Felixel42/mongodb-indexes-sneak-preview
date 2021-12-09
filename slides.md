@@ -128,14 +128,14 @@ image: https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg
   src="https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg"
 />
 
-[^1]: [MongoDB - Indexes](https://docs.mongodb.com/manual/indexes/)
+[^1]: ["index-for-sort" - MongoDB Documentation](https://docs.mongodb.com/manual/indexes/), [License: CC BY 3.0](https://www.mongodb.com/community/licensing)
 
 <style>
   h1 {
     @apply !text-2xl;
   }
   .footnotes-sep {
-    @apply mt-110 opacity-10;
+    @apply mt-105 opacity-10;
   }
   .footnotes {
     @apply text-sm opacity-75;
