@@ -68,12 +68,8 @@ F -->|Execute| H[Query Result]
 </style>
 
 ---
-class: fade
----
 
 # Plan
-
-<v-clicks>
 
 - Features von MongoDB Compass
 - Single Field Indizes
@@ -81,11 +77,10 @@ class: fade
 - Covered Queries 💡🚀 <twemoji-magic-wand class="animate-ping"/>
 - 🎁 
 
-</v-clicks>
-
 ---
 class: fade
 ---
+
 # MongoDB Compass <simple-icons-mongodb/>
 
 <v-clicks >
