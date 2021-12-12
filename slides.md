@@ -144,6 +144,58 @@ image: https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg
     display: none;
   }
 </style>
+
+---
+class: fade
+---
+
+# Testen von Query und Index ?
+
+<v-clicks>
+
+- schnelle Ausführung
+- geringe Ressourcenauslastung (Disk, CPU, ...)
+- `Performance Advisor` zeigt keine <noto-warning/>
+- `Query Plan` analysieren 🕵️
+  - `explain()` 
+
+</v-clicks>
+
+<v-click>
+
+```js
+"queryPlanner" : {
+   "parsedQuery" : {
+     ...
+    },
+   "winningPlan" : {
+     ...
+    },
+   "rejectedPlans" : []
+}
+```
+
+[Explain results](https://docs.mongodb.com/manual/reference/explain-results/)
+
+</v-click>
+
+
+[^1]: ["index-for-sort" - MongoDB Documentation](https://docs.mongodb.com/manual/indexes/), [License: CC BY 3.0](https://www.mongodb.com/community/licensing)
+
+<style>
+  h1 {
+    @apply !text-2xl;
+  }
+  .footnotes-sep {
+    @apply mt-105 opacity-10;
+  }
+  .footnotes {
+    @apply text-sm opacity-75;
+  }
+  .footnote-backref {
+    display: none;
+  }
+</style>
 ---
 
 # AirBnB Dataset [^1]
