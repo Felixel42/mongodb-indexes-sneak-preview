@@ -144,7 +144,7 @@ image: https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg
 class: fade
 ---
 
-# Testen von Query und Index ?
+# Query und Index Testen
 
 <v-clicks>
 
@@ -160,11 +160,14 @@ class: fade
 
 ```js
 "queryPlanner" : {
-   "parsedQuery" : {
-     ...
-    },
+   "parsedQuery" : {},
    "winningPlan" : {
-     ...
+      "stage" : <STAGE1>,
+      ...
+      "inputStage" : {
+         "stage" : <STAGE2>,
+         ...
+      }
     },
    "rejectedPlans" : []
 }
@@ -179,7 +182,7 @@ class: fade
 
 <style>
   h1 {
-    @apply !text-2xl;
+    @apply !text-1xl;
   }
   .footnotes-sep {
     @apply mt-105 opacity-10;
