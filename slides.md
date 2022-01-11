@@ -71,7 +71,7 @@ F -->|Execute| H[Query Result]
 
 # Plan
 
-- Features von MongoDB Compass
+- Features von MongoDB Compass vorstellen
 - Single Field Indizes
 - Compound Indizes
 - Covered Queries 💡🚀 <twemoji-magic-wand class="animate-ping"/>
@@ -144,7 +144,7 @@ image: https://docs.mongodb.com/manual/images/index-for-sort.bakedsvg.svg
 class: fade
 ---
 
-# Query und Index Testen
+# Nutzt die Query den Index ? 
 
 <v-clicks>
 
@@ -256,7 +256,7 @@ image: https://source.unsplash.com/random?coding
 layout: cover
 ---
 
-# Danke! 🎄
+# Danke! 🚀
 
 - <carbon-link /> [Sample AirBnB Listings Dataset - Daten von Inside Airbnb](https://docs.atlas.mongodb.com/sample-data/sample-airbnb/)
 - <carbon-logo-github /> [github.com/Felixel42/mongodb-indexes-sneak-preview](https://github.com/Felixel42/mongodb-indexes-sneak-preview)
