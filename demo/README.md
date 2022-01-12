@@ -44,9 +44,9 @@ db.airbnb.find({property_type: "House"}) //COLLSCAN
 > [Docs](https://docs.mongodb.com/manual/core/index-compound/)
 
 ```javascript
-db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, {reviews : 0, amenities: 0}})
-db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, cancellation_policy : {$in : ["moderate", "flexible"]}}, {reviews : 0, amenities: 0})
-db.explain. ...
+db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, {property_type : 1, bedrooms: 1}})
+db.airbnb.find({property_type : "House", bedrooms : {$gt : 3}, cancellation_policy : {$in : ["moderate", "flexible"]}}, {property_type : 1, bedrooms: 1, cancellation_policy : 1}})
+db.explain(). ...
 ```
 
 - create index on all fields of query
